@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let n = +prompt("nhap vao so nguyen duong n: ");
+        
+
+        // function divSe (n) {
+        //     let sum = 0;
+        //     for(let i = 0; i <= n; i++) {
+        //         if(i % 7 === 0) {
+        //             sum += i;
+        //         }
+        //     }
+        //     return sum;
+        // }
+        // let result = divSe(n);
+        // alert(`Tong cac so chia het cho 7 trong day so tu 0 den ${n} la: ${result}`);
+
+       
+            function sumFirst30MultiplesOf7() {
+                let sum = 0;
+                let count = 0;
+                let number = 0;
+
+                
+                while (count < 30) {
+                    if (number % 7 === 0) {
+                        sum += number;
+                        count++;
+                    }
+                    number++;
+                }
+
+                return sum;
+            }
+
+            
+            const result = sumFirst30MultiplesOf7();
+            console.log("Tổng của 30 số chia hết cho 7 đầu tiên là:", result);
+    </script>
+</body>
+</html>

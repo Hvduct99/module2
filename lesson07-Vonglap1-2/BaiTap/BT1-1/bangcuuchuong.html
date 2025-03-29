@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bảng Cửu Chương</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+            font-family: Arial;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table id="multiplicationTable"></table>
+
+    <script>
+
+        let table = document.getElementById("multiplicationTable");
+        let content = "";
+        content += "<tr>";
+        for (let i = 1; i <= 10; i++) {
+            content += `<th>${i}</th>`;
+        }
+        content += "</tr>";
+        for (let j = 1; j <= 10; j++) {
+            content += "<tr>";
+            for (let i = 1; i <= 10; i++) {
+                content += `<td>${i} x ${j} = ${i * j}</td>`;
+            }
+            content += "</tr>";
+        }
+
+        table.innerHTML = content;
+    </script>
+</body>
+</html>

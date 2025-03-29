@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var year = parseInt(prompt("Nhap vao nam"));
+
+        var isLea = false;
+
+        var isDiv4 = year % 4 == 0;
+        if (isDiv4) {
+            var isDiv100 = year % 100 == 0;
+            if(isDiv100) {
+                var isDiv400 = year % 400 == 0;
+                if(isDiv400) {
+                    isLea = true;
+                }
+            }else {
+                isLea = true;
+            }
+        }
+        if(isLea) {
+            alert(year + "la nam nhuan");
+        }else {
+            alert(year + "khong phai nam nhuan");
+        }
+    </script>
+</body>
+</html>

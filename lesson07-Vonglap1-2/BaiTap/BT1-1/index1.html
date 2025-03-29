@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>20 Số Nguyên Tố Đầu Tiên</title>
+    <style>
+        .container {
+            margin: 20px;
+            font-family: Arial;
+        }
+        .prime-numbers {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>20 số nguyên tố đầu tiên:</h3>
+        <div id="result" class="prime-numbers"></div>
+    </div>
+
+    <script>
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        
+        let count = 0;    
+        let number = 2;   
+        let primes = [];  
+        for (; count < 20; number++) {
+            if (isPrime(number)) {
+                primes.push(number);
+                count++;
+            }
+        }
+
+        document.getElementById("result").innerHTML = primes.join(", ");
+    </script>
+</body>
+</html>

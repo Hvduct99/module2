@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        switch(new Date().getDay()) {
+            case 1:
+            case 2:
+            case 3:
+            default:
+                text = "khong biet thu may dau tuan";
+                break;
+            case 4:
+            case 5:
+                text = "som quay lai giua tuan";
+                break;
+            case 0:
+            case 6:
+                text = "cuoi tuaan";
+        }
+        document.write(text)
+    </script>
+</body>
+</html>

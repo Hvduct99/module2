@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let tdo;
+      while(true) {
+        tdp = +prompt("nhap vao nhiệt độ");
+        if(tdp < 20) {
+          alert("Thấp quá nhap lai nhiet do > 20");
+        } else if(tdp > 100) {
+          alert("Cao quá nhap lai nhiet do < 100");
+        } else {
+          alert("Vừa phải");
+          break;
+        }
+      }
+    </script>
+</body>
+</html>

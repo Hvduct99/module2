@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array = [0, 1];
+        // let n = +prompt("Nhập vào số nguyen duong n: ");
+        // if(n < 0) {
+        //     alert("Nhập lại số nguyên dương n: ");
+        // } else {20
+        //     for(let i = 2; i < n; i++) {
+        //         array[i] = array[i - 1] + array[i - 2];
+        //         if(array[i] > n) {
+        //             break;
+        //         }
+        //     }
+        // }
+        
+        // alert(array.join(", "));
+        let n = +prompt("Nhập vào số nguyên dương n: ");
+        
+        if(n < 0) {
+            alert("Nhập lại số nguyên dương n: ");
+        } else {
+            let a = [0, 1];
+            let sum = 0 ;
+            for(let i = 2; i<n; i++) {
+                a[i] = a[i-1] + a[i-2];
+                sum += a[i];
+            }
+            alert("Dãy Fibonacci với " + n + " phần tử: " + a.join(", ") + "\nTổng: " + sum);
+        }
+    </script>
+</body>
+</html>
