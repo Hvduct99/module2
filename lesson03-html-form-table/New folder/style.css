@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.container .box-left {
+  width: 250px;
+  margin-left: 70%;
+  margin-top: 30px;
+  padding: 15px;
+}
+.container .box-left img {
+  width: 250px;
+}
+.container .box-left p {
+  padding: 15px;
+}
+.container .box-right {
+  margin-top: 30px;
+}
+.container .box-right p, .container .box-right h3, .container .box-right h1 {
+  padding: 15px;
+}
+.container .box-right .h3 {
+  width: 350px;
+}
+
+/*# sourceMappingURL=style.css.map */
