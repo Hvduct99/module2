@@ -50,6 +50,16 @@
             setWeight(weight) {
                 this.weight = weight;
             }
+            say(string) {
+                console.log(string);
+            }
+            isMale() {
+                return this.gender === 'male';
+            }
+            isFemale() {
+                return this.gender === 'female';
+            }
+            
         }
         let orangeAplle = new Aplle();
         let greenAplle = new Aplle();
