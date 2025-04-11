@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: {first:'Bob', last:'smith'},
+            age: 25,
+            interests :["music", "exercise"],
+            greeting: function() {
+                alert("Hello, I\'m" + this.name.first + ".");
+            }
+        };
+        console.log(person.name.first);
+        console.log(person.age);
+        person.greeting();
+        console.log(person["name"]["first"]);
+        console.log(person["age"]);
+        person.height = "235";
+        person.sayGoodbye = function() {
+            alert("Goodbye, I\'m" + this.name.first + ".");
+        };
+        person.sayGoodbye();
+    </script>
+</body>
+</html>

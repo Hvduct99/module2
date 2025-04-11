@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function duc(id, name, age) {
+            this.stt = id;
+            this.ten = name;
+            this.tuoi = age;
+            this.getInfor = function () {
+                return "ID = " + this.stt + " NAme = " + this.ten + " Age = " + this.tuoi;
+            }
+        }
+        var student = new duc(1, "hoang duc", 20);
+        document.write(student.getInfor());
+
+    </script>
+</body>
+</html>

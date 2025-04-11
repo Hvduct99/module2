@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let apple = {
+            type: "red delicious",
+            color: "red",
+            size: "medium",
+            getInfo: function() {
+                return `${this.type} + " " + ${this.color + " " + this.size}`;
+            }
+        }
+        apple.color = "green";
+        alert(apple.getInfo());
+        
+        let apple2 = new function() {
+            this.type = "red delicious";
+            this.color = "red";
+            this.size = "medium";
+            this.getInfo = function() {
+                return `${this.type} + " " + ${this.color + " " + this.size}`;
+            }
+        }
+    </script>
+</body>
+</html>
