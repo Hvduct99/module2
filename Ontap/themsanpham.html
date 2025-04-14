@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Ten san pham">
+        <input type="text" id="price" placeholder="Gia san pham">
+        <input type="text" id="quantity" placeholder="So luong san pham">
+        <button onclick="addProduct()">them san pham</button>
+    </div>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Ten san pham</th>
+                <th>Gia san pham</th>
+                <th>So luong san pham</th>
+            </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+    </table>
+    <script>
+        let products = [];
+        function addProduct() {
+            const name = document.getElementById("name").value;
+            const price = document.getElementById("price").value;
+            const quantity = document.getElementById("quantity").value;
+            const product = {
+                name: name,
+                price: price,
+                quantity: quantity
+            };
+            products.push(product);
+            displayProducts();
+            document.getElementById("name").value = "";
+            document.getElementById("price").value = "";
+            document.getElementById("quantity").value = "";
+            }
+        
+        // hàm hiển thị sản phẩm
+        function displayProducts() {
+            const productList = document.getElementById("productList");
+            productList.innerHTML = "";
+            products.forEach(product => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${product.name}</td>
+                    <td>${product.price} VND</td>
+                    <td>${product.quantity}</td>
+                `;
+                productList.appendChild(row);
+            });
+        }
+                
+
+    </script>
+</body>
+</html>
