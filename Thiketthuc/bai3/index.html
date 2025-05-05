@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý sách</h1>
+        <button class="add-btn" id="addBookBtn">Thêm sách mới</button>
+        <button class="most-books-btn" id="showMostBooksBtn">Hiển thị sách nhiều nhất</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã số sách</th>
+                    <th>Tên sách</th>
+                    <th>Năm xuất bản</th>
+                    <th>Số quyển</th>
+                    <th>Tình trạng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody"></tbody>
+        </table>
+
+        <!-- Modal thêm sách -->
+        <div id="addBookModal" class="modal">
+            <div class="modal-content">
+                <h2>Thêm sách mới</h2>
+                <form id="addBookForm">
+                    <div class="form-group">
+                        <label for="bookId">Mã số sách</label>
+                        <input type="text" id="bookId" maxlength="5" placeholder="VD: 12345">
+                        <div id="bookIdError" class="error">Mã số sách phải có 5 ký tự, ký tự đầu từ 1-5, các ký tự còn lại từ 0-9.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookTitle">Tên sách</label>
+                        <input type="text" id="bookTitle" placeholder="Nhập tên sách">
+                        <div id="bookTitleError" class="error">Tên sách không được để trống.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="publishYear">Năm xuất bản</label>
+                        <input type="number" id="publishYear" placeholder="VD: 2023">
+                        <div id="publishYearError" class="error">Năm xuất bản phải là số có 4 chữ số.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Số quyển</label>
+                        <input type="number" id="quantity" placeholder="VD: 10">
+                        <div id="quantityError" class="error">Số quyển phải là số nguyên dương.</div>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" id="cancelBtn" class="cancel-btn">Hủy</button>
+                        <button type="submit" class="submit-btn">Thêm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal thông báo -->
+        <div id="successModal" class="modal success-modal">
+            <div class="modal-content">
+                <h2>Thông báo</h2>
+                <p id="successMessage"></p>
+                <ul id="mostBooksList" style="display: none;"></ul>
+                <div class="modal-buttons">
+                    <button id="closeSuccessBtn" class="submit-btn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

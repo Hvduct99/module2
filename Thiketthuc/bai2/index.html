@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function isAmicable(a, b) {
+    const sumDivisors = (n) => {
+        let sum = 1;
+        for (let i = 2; i * i <= n; i++) {
+            if (n % i === 0) {
+                sum += i;
+                if (i * i !== n) sum += n / i;
+            }
+        }
+        return sum;
+    };
+    return sumDivisors(a) === b && sumDivisors(b) === a;
+}
+function checkAmicableNumbers() {
+    let a = +prompt("Nhập số nguyên dương thứ nhất:");
+    let b = +prompt("Nhập số nguyên dương thứ hai:");
+    
+    a = parseInt(a);
+    b = parseInt(b);
+    
+    if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
+        document.write("Vui lòng nhập hai số nguyên dương hợp lệ!");
+        return;
+    }
+    if (isAmicable(a, b)) {
+        document.write(`${a} và ${b} là cặp số thân thiết.`);
+    } else {
+        document.write(`${a} và ${b} không phải là cặp số thân thiết.`);
+    }
+}
+checkAmicableNumbers();
+</script>
+</body>
+</html>
